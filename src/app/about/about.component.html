@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="about-content">
+  <p>Profile Picture</p>
+  <div class="image-container">
+    <img [src]="profileImageUrl" alt="" class="profile-image">
+    <div class="image-actions">
+      <label for="file-upload" class="custom-file-upload">
+        <input type="file" id="file-upload" (change)="onFileSelected($event)" accept="image/*">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C">
+          <path
+            d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+        </svg>
+      </label>
+      <button (click)="deleteImage()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323">
+          <path
+            d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

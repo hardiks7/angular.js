@@ -1,0 +1,77 @@
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure the content is centered vertically */
+  padding: 20px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Increase space between the image and actions */
+  margin-top: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #857474; /* Slightly thicker border for better visibility */
+  transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increase spacing between buttons */
+}
+
+.custom-file-upload {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-file-upload:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload svg {
+  transition: fill 0.3s ease;
+}
+
+.custom-file-upload:hover svg {
+  fill: #5acd3a; /* Slightly darker green on hover */
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+button svg {
+  transition: fill 0.3s ease;
+}
+
+button:hover svg {
+  fill: #c22b1d; /* Slightly darker red on hover */
+}

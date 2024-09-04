@@ -1,0 +1,39 @@
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+    <label for="search-box">Hero Search</label>
+    <input #searchBox id="search-box" (input)="searchData($event)" />
+    <!-- Table with CSS Styling -->
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of data ">
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.contact}}</td>
+                    <td>{{item.email}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    <div>
+        <span *ngIf="data.length == 0">
+            <p>Data Not Founds</p>
+        </span>
+    </div>
+</div>
+
+<!-- Styled Go Back Button -->
+<button type="button" (click)="goback()" class="go-back-btn">
+    Go Back
+</button>
+<button type="button" (click)="hero_form()" class="go-back-btn">
+    Hero Form
+</button>

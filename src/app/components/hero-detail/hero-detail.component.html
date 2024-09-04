@@ -1,0 +1,43 @@
+<style>
+  /* your-component.component.css */
+  button {
+    background-color: #007bff;
+    /* Blue background */
+    color: #ffffff;
+    /* White text */
+    font-weight: bold;
+    /* Bold text */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+  }
+
+  button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+  }
+
+  button:focus {
+    outline: none;
+    /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    /* Custom focus ring */
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+</style>
+<div class="btn">
+  <button type="button" (click)="btn()">Save</button>
+</div>

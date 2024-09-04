@@ -1,0 +1,138 @@
+/* Header container styling */
+.header-nav {
+  background-color: #333; /* Dark background for contrast */
+  color: #fff; /* Light text color */
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  position: fixed; /* Fixed positioning for sticky behavior */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensures header stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+/* Container for header content */
+.container {
+  display: flex;
+  justify-content: space-between; /* Space out the header items */
+  align-items: center; /* Center items vertically */
+  max-width: 1200px; /* Maximum width for content */
+  margin: 0 auto; /* Center align the container */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+/* Styling for logo */
+.logo a {
+  color: #fff; /* Logo text color */
+  font-size: 24px; /* Adjust font size for visibility */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the logo text bold */
+}
+
+/* Menu items styling */
+.menu-items {
+  display: flex;
+  gap: 20px; /* Space between menu items */
+}
+
+.menu-items a {
+  color: #fff; /* Text color for menu items */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size for readability */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for menu items */
+.menu-items a:hover {
+  color: #ccc; /* Lighten color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px 10px; /* Padding for input field */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Space between input and button */
+  font-size: 14px; /* Font size for readability */
+}
+
+.search-bar button {
+  padding: 5px 10px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #555; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Button hover effect */
+.search-bar button:hover {
+  background-color: #666; /* Darken button color on hover */
+}
+
+/* Styling for login item */
+.login-item a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size for login item */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for login item */
+.login-item a:hover {
+  color: #ccc; /* Lighten color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Profile Image styling */
+.profile-image {
+  width: 40px; /* Smaller size to fit in header */
+  height: 40px; /* Matching width and height */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure image covers the area */
+  border: 2px solid #fff; /* Add a white border */
+  margin-left: 20px; /* Space between the login and profile image */
+  transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+/* Profile Image hover effect */
+.profile-image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Adjust margin-top for content below the header */
+.home-content {
+  margin-top: 80px; /* Adjust based on header height */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .menu-items {
+    margin-top: 10px; /* Add space above menu items */
+  }
+
+  .profile-image {
+    margin-top: 10px; /* Space above profile image */
+  }
+
+  .search-bar {
+    margin-top: 10px; /* Space above search bar */
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .search-bar input {
+    width: calc(100% - 70px); /* Adjust input width */
+  }
+}

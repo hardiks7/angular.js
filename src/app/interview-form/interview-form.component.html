@@ -1,0 +1,64 @@
+<form [formGroup]="interviewForm" (ngSubmit)="onSubmit()">
+    <h2>Basic Details</h2>
+    <div formGroupName="basicDetails">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" required>
+        <div *ngIf="interviewForm.get('basicDetails.name')?.invalid && interviewForm.get('basicDetails.name')?.touched">
+            Name is required
+        </div>
+
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" required>
+        <div
+            *ngIf="interviewForm.get('basicDetails.email')?.invalid && interviewForm.get('basicDetails.email')?.touched">
+            Valid email is required
+        </div>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" formControlName="phone" type="text" required>
+        <div
+            *ngIf="interviewForm.get('basicDetails.phone')?.invalid && interviewForm.get('basicDetails.phone')?.touched">
+            Phone number is required
+        </div>
+
+        <label for="address">Address:</label>
+        <input id="address" formControlName="address" type="text" required>
+        <div
+            *ngIf="interviewForm.get('basicDetails.address')?.invalid && interviewForm.get('basicDetails.address')?.touched">
+            Address is required
+        </div>
+    </div>
+
+    <h2>Advanced Details</h2>
+    <div formGroupName="advancedDetails">
+        <label for="experience">Experience:</label>
+        <input id="experience" formControlName="experience" type="text" required>
+        <div
+            *ngIf="interviewForm.get('advancedDetails.experience')?.invalid && interviewForm.get('advancedDetails.experience')?.touched">
+            Experience is required
+        </div>
+
+        <label for="skills">Skills:</label>
+        <input id="skills" formControlName="skills" type="text" required>
+        <div
+            *ngIf="interviewForm.get('advancedDetails.skills')?.invalid && interviewForm.get('advancedDetails.skills')?.touched">
+            Skills are required
+        </div>
+
+        <label for="expectedSalary">Expected Salary:</label>
+        <input id="expectedSalary" formControlName="expectedSalary" type="text" required>
+        <div
+            *ngIf="interviewForm.get('advancedDetails.expectedSalary')?.invalid && interviewForm.get('advancedDetails.expectedSalary')?.touched">
+            Expected salary is required
+        </div>
+
+        <label for="availability">Availability:</label>
+        <input id="availability" formControlName="availability" type="text" required>
+        <div
+            *ngIf="interviewForm.get('advancedDetails.availability')?.invalid && interviewForm.get('advancedDetails.availability')?.touched">
+            Availability is required
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!interviewForm.valid">Submit</button>
+</form>
