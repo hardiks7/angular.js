@@ -16,14 +16,13 @@ import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-    { path: '', component: DashboardComponent, },
-    { path: 'msg', component: MessagesComponent, },
+    { path: '', component: DashboardComponent },
+    { path: 'msg', component: MessagesComponent },
     { path: 'app-dashboard', component: HeroeDetailComponent },
     { path: 'hero_form', component: HeroFormComponent },
     { path: 'interview-form', component: InterviewFormComponent },
     { path: 'header', component: HeaderComponent },
     { path: 'home', component: HomeComponent },
-    { path: 'home', redirectTo: '', pathMatch: 'full' },
     { path: 'about', component: AboutComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'products', component: ProductsComponent },
@@ -31,6 +30,7 @@ export const routes: Routes = [
     { path: 'careers', component: CareersComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'help', component: HelpComponent },
-    { path: 'login', component: LoginComponent  }
-
+    { path: 'login', component: LoginComponent },
+    { path: '**', redirectTo: '' }
 ];
+

@@ -11,7 +11,9 @@ import { ServicesComponent } from './services/services.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,14 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
-  
-    
+    MatSnackBarModule  
+
   ],
   providers: [],
   bootstrap: [AppComponent]

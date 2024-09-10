@@ -20,7 +20,7 @@ export class HeaderComponent {
     { name: 'Blog', link: '/blog' },
     { name: 'Careers', link: '/careers' },
     { name: 'Contact', link: '/contact' },
-    { name: 'Help', link: '/help' },
+    { name: 'Help', link: '/help' }
   ];
 
   profileImageUrl: string = 'assets/default-profile.png';

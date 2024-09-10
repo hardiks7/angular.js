@@ -1,29 +1,24 @@
 <nav class="header-nav">
   <div class="container">
-    <!-- Logo -->
     <div class="logo">
-      <a href="/">MyApp</a>
+      <a routerLink="/">MyApp</a>
     </div>
 
-    <!-- Menu Items -->
     <div class="menu-items">
       <ng-container *ngFor="let item of menuItems">
-        <a href="{{item.link}}" (click)="toggleSearchBar($event, item.name)">{{item.name}}</a>
+        <a [routerLink]="item.link" (click)="toggleSearchBar($event, item.name)">{{item.name}}</a>
       </ng-container>
     </div>
 
-    <!-- Search Bar -->
     <div class="search-bar" *ngIf="showSearchBar">
       <input type="text" placeholder="Search..." />
       <button type="button">Search</button>
     </div>
 
-    <!-- Login Item -->
     <div class="login-item">
-      <a href="/login">Login</a>
+      <a routerLink="/login">Login</a>
     </div>
 
-    <!-- Profile Image -->
     <img [src]="profileImageUrl" alt="Profile Image" class="profile-image">
   </div>
 </nav>

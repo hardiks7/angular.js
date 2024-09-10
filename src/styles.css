@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Global Styles - src/styles.css */
+.custom-snackbar {
+    background-color: #333; /* Dark background */
+    color: #fff;            /* White text */
+    font-size: 16px;        /* Larger text */
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px;     /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  }
+  
+  /* Styling for the action button in the snackbar */
+  .mat-simple-snackbar-action {
+    color: #4CAF50; /* Green color for the refresh button */
+    font-weight: bold;
+  }
+  
+  .mat-simple-snackbar-action:hover {
+    color: #388E3C; /* Darker green when hovered */
+  }
+  

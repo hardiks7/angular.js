@@ -1,4 +1,6 @@
-<app-header></app-header>
 <div class="home-content">
-    <p>Home works!</p>
-</div>
+    <h2>Upload and Display Profile Picture</h2>
+    <img [src]="profileImageUrl" alt="Profile Image" class="profile-image">
+    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+  </div>
+  
